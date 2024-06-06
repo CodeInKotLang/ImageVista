@@ -1,4 +1,4 @@
-package com.example.imagevista.ui.theme
+package com.example.imagevista.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 

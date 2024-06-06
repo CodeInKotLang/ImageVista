@@ -1,4 +1,4 @@
-package com.example.imagevista.ui.theme
+package com.example.imagevista.presentation.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
