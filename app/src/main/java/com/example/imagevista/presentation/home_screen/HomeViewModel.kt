@@ -5,13 +5,16 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.imagevista.data.mapper.toDomainModelList
-import com.example.imagevista.data.remote.dto.UnsplashImageDto
-import com.example.imagevista.di.AppModule
 import com.example.imagevista.domain.model.UnsplashImage
+import com.example.imagevista.domain.repository.ImageRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class HomeViewModel: ViewModel() {
+@HiltViewModel
+class HomeViewModel @Inject constructor(
+    private val repository: ImageRepository
+): ViewModel() {
 
     var images: List<UnsplashImage> by mutableStateOf(emptyList())
         private set
@@ -22,8 +25,8 @@ class HomeViewModel: ViewModel() {
 
     private fun getImages() {
         viewModelScope.launch {
-            val result = AppModule.retrofitService.getEditorialFeedImages()
-            images = result.toDomainModelList()
+            val result = repository.getEditorialFeedImages()
+            images = result
         }
     }
 }
