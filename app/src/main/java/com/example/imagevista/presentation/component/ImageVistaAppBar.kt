@@ -81,7 +81,7 @@ fun FullImageViewTopBar(
     image: UnsplashImage?,
     isVisible: Boolean,
     onBackClick: () -> Unit,
-    onPhotographerImgClick: (String) -> Unit,
+    onPhotographerNameClick: (String) -> Unit,
     onDownloadImgClick: () -> Unit,
 ) {
     AnimatedVisibility(
@@ -109,7 +109,7 @@ fun FullImageViewTopBar(
             Spacer(modifier = Modifier.width(10.dp))
             Column(
                 modifier = Modifier.clickable {
-                    image?.let { onPhotographerImgClick(it.photographerProfileImgUrl) }
+                    image?.let { onPhotographerNameClick(it.photographerProfileLink) }
                 }
             ) {
                 Text(
