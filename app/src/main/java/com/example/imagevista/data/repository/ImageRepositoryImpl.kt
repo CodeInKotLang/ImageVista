@@ -1,5 +1,6 @@
 package com.example.imagevista.data.repository
 
+import com.example.imagevista.data.mapper.toDomainModel
 import com.example.imagevista.data.mapper.toDomainModelList
 import com.example.imagevista.data.remote.UnsplashApiService
 import com.example.imagevista.domain.model.UnsplashImage
@@ -11,5 +12,9 @@ class ImageRepositoryImpl(
 
     override suspend fun getEditorialFeedImages(): List<UnsplashImage> {
         return unsplashApi.getEditorialFeedImages().toDomainModelList()
+    }
+
+    override suspend fun getImage(imageId: String): UnsplashImage {
+        return unsplashApi.getImage(imageId).toDomainModel()
     }
 }
