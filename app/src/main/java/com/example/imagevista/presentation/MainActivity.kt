@@ -72,6 +72,8 @@ class MainActivity : ComponentActivity() {
                 val navController = rememberNavController()
                 val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior()
                 val snackbarHostState = remember { SnackbarHostState() }
+
+                var searchQuery by rememberSaveable { mutableStateOf("") }
                 Scaffold(
                     snackbarHost = { SnackbarHost(hostState = snackbarHostState) },
                     modifier = Modifier
@@ -88,7 +90,9 @@ class MainActivity : ComponentActivity() {
                     NavGraphSetup(
                         navController = navController,
                         scrollBehavior = scrollBehavior,
-                        snackbarHostState = snackbarHostState
+                        snackbarHostState = snackbarHostState,
+                        searchQuery = searchQuery,
+                        onSearchQueryChange = { searchQuery = it }
                     )
                 }
             }
