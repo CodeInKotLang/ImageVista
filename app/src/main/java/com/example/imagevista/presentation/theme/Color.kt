@@ -1,4 +1,4 @@
-package com.example.imagevista.ui.theme
+package com.example.imagevista.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 
@@ -59,6 +59,8 @@ val scrimDark = Color(0xFF000000)
 val inverseSurfaceDark = Color(0xFFDFE3E8)
 val inverseOnSurfaceDark = Color(0xFF2D3135)
 val inversePrimaryDark = Color(0xFF246488)
+
+val CustomGreen = Color(0xFF19B661)
 
 
 
