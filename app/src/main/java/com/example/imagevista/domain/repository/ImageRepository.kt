@@ -11,4 +11,10 @@ interface ImageRepository {
     suspend fun getImage(imageId: String): UnsplashImage
 
     fun searchImages(query: String): Flow<PagingData<UnsplashImage>>
+
+    fun getAllFavoriteImages(): Flow<PagingData<UnsplashImage>>
+
+    suspend fun toggleFavoriteStatus(image: UnsplashImage)
+
+    fun getFavoriteImageIds(): Flow<List<String>>
 }

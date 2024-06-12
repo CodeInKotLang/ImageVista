@@ -18,9 +18,11 @@ import com.example.imagevista.domain.model.UnsplashImage
 fun ImagesVerticalGrid(
     modifier: Modifier = Modifier,
     images: LazyPagingItems<UnsplashImage>,
+    favoriteImageIds: List<String>,
     onImageClick: (String) -> Unit,
     onImageDragStart: (UnsplashImage?) -> Unit,
-    onImageDragEnd: () -> Unit
+    onImageDragEnd: () -> Unit,
+    onToggleFavoriteStatus: (UnsplashImage) -> Unit
 ) {
     LazyVerticalStaggeredGrid(
         modifier = modifier,
@@ -29,7 +31,7 @@ fun ImagesVerticalGrid(
         verticalItemSpacing = 10.dp,
         horizontalArrangement = Arrangement.spacedBy(10.dp)
     ) {
-        items(count = images.itemCount) {index ->
+        items(count = images.itemCount) { index ->
             val image = images[index]
             ImageCard(
                 image = image,
@@ -42,7 +44,9 @@ fun ImagesVerticalGrid(
                             onDragEnd = { onImageDragEnd() },
                             onDrag = { _, _ -> }
                         )
-                    }
+                    },
+                onToggleFavoriteStatus = { image?.let { onToggleFavoriteStatus(it) } },
+                isFavorite = favoriteImageIds.contains(image?.id)
             )
         }
     }
