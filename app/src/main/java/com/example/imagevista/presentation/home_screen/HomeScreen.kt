@@ -20,6 +20,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.paging.compose.LazyPagingItems
 import com.example.imagevista.R
 import com.example.imagevista.domain.model.UnsplashImage
 import com.example.imagevista.presentation.component.ImageVistaTopAppBar
@@ -34,10 +35,12 @@ fun HomeScreen(
     snackbarHostState: SnackbarHostState,
     snackbarEvent: Flow<SnackbarEvent>,
     scrollBehavior: TopAppBarScrollBehavior,
-    images: List<UnsplashImage>,
+    images: LazyPagingItems<UnsplashImage>,
+    favoriteImageIds: List<String>,
     onImageClick: (String) -> Unit,
     onSearchClick: () -> Unit,
     onFABClick: () -> Unit,
+    onToggleFavoriteStatus: (UnsplashImage) -> Unit
 ) {
 
     var showImagePreview by remember { mutableStateOf(false) }
@@ -61,15 +64,17 @@ fun HomeScreen(
                 scrollBehavior = scrollBehavior,
                 onSearchClick = onSearchClick
             )
-//            ImagesVerticalGrid(
-//                images = images,
-//                onImageClick = onImageClick,
-//                onImageDragStart = { image ->
-//                    activeImage = image
-//                    showImagePreview = true
-//                },
-//                onImageDragEnd = { showImagePreview = false }
-//            )
+            ImagesVerticalGrid(
+                images = images,
+                onImageClick = onImageClick,
+                favoriteImageIds = favoriteImageIds,
+                onImageDragStart = { image ->
+                    activeImage = image
+                    showImagePreview = true
+                },
+                onImageDragEnd = { showImagePreview = false },
+                onToggleFavoriteStatus = onToggleFavoriteStatus
+            )
         }
         FloatingActionButton(
             modifier = Modifier

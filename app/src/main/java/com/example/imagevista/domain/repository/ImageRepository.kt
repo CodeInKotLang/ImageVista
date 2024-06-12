@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.Flow
 
 interface ImageRepository {
 
-    suspend fun getEditorialFeedImages(): List<UnsplashImage>
+    fun getEditorialFeedImages(): Flow<PagingData<UnsplashImage>>
 
     suspend fun getImage(imageId: String): UnsplashImage
 

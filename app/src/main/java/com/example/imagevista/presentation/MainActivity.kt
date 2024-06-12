@@ -74,6 +74,7 @@ class MainActivity : ComponentActivity() {
                 val snackbarHostState = remember { SnackbarHostState() }
 
                 var searchQuery by rememberSaveable { mutableStateOf("") }
+
                 Scaffold(
                     snackbarHost = { SnackbarHost(hostState = snackbarHostState) },
                     modifier = Modifier
