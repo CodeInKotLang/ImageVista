@@ -1,6 +1,6 @@
-# Android App Development
+# Image Vista Android App
 
-Welcome to the Image Vista Android App repository. We will build an amazing Android application, Image Vista, that showcases beautiful images from the Unsplash API." We'll be using a range of powerful libraries and frameworks to build our app. Here's what you'll learn: Jetpack Compose, Material 3, Splash Screen, Paging 3, Coil, Dagger Hilt, Compose Navigation, Retrofit and Room.
+Welcome to the Image Vista Android App repository. We will build an amazing Android application that showcases beautiful images from the Unsplash API. We'll be using a range of powerful libraries and frameworks to build our app. Here's what you'll learn: Jetpack Compose, Material 3, Splash Screen, Paging 3, Coil, Dagger Hilt, Compose Navigation, Retrofit and Room.
 
 ## Course Overview
 
