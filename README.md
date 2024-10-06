@@ -20,11 +20,14 @@ Welcome to the Image Vista Android App repository. We will build an amazing Andr
 
 # :camera_flash: **Screenshots** :camera_flash:
 
-| Main Feed Screen                  | Search Screen                     | Bookmarks Screen                  | Profile Screen (WebView)          |
-|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|
-| <img width="200" height="434" src="./readme-assets/2.gif">          | <img width="200" height="434" src="./readme-assets/7.gif">          | <img width="200" height="434" src="./readme-assets/8.gif"> | <img width="200" height="434" src="./readme-assets/6.gif"> | 
-| Splash Screen                  | Preview Image                     | Zoom Image                  | Download Image          |
-| <img width="200" height="434" src="./readme-assets/1.gif">          | <img width="200" height="434" src="./readme-assets/3.gif">          | <img width="200" height="434" src="./readme-assets/4.gif"> | <img width="200" height="434" src="./readme-assets/5.gif"> | 
+| Main Feed Screen                  | Search Screen                     | Bookmarks Screen                  |
+|-----------------------------------|-----------------------------------|-----------------------------------|
+| <img width="150" height="325" src="./readme-assets/2.gif"> | <img width="150" height="325" src="./readme-assets/7.gif">  | <img width="150" height="325" src="./readme-assets/8.gif"> |
+| Profile (WebView)                 | Splash Screen                     | Preview Image                     | 
+| <img width="150" height="325" src="./readme-assets/6.gif"> | <img width="150" height="325" src="./readme-assets/1.gif">  | <img width="150" height="325" src="./readme-assets/3.gif"> |
+| Zoom Image                        | Download Image                    | Dark Mode                         |
+| <img width="150" height="325" src="./readme-assets/4.gif"> | <img width="150" height="325" src="./readme-assets/5.gif">  | <img width="150" height="325" src="./readme-assets/9.gif"> |
+
 
 # :hammer_and_wrench: Youtube Playlist :hammer_and_wrench:
 
@@ -43,27 +46,3 @@ Check out my Udemy online course: [MeasureMate Android App](https://www.udemy.co
 
 
 Happy learning and building amazing Android apps!
-
-# :scroll: License :scroll:
-
-MIT License
-
-Copyright (c) 2024 Mohammad Arif
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
